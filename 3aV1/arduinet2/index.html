@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP8266 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>ESP8266 Web Server</h1>
+
+  <p>
+  <div>Saída Analógica</ div>
+  <form onsubmit="return false;" method="post" name="myForm">
+    <label>Valor</label>
+    <input type="text" name="saidaAnalogica" id="saidaAnalogica" />
+    <input type="submit" name="submit" onclick="enviaAnalogica()" />
+  </form>
+  </p>
+
+  <p>
+    <div>Saída Digital</div>
+    <div id="saidaDigital"><strong> %DO%</strong></div>
+    <button class="button" onclick="clickOn()">ON</button> 
+    <button class="button button2" onclick="clickOff()">OFF</button> 
+  </p>
+
+  <p>
+    <div>Entrada Analógica</div>
+    <div id="entradaAnalogica">%AI%</div>
+  </p>
+
+  <p>
+    <div>Entrada Digital</div>
+    <div id="entradaDigital">%DI%</div>
+  </p>
+  
+</body>
+<script>
+  url = "http://192.168.192.201"
+
+  function enviaAnalogica() {
+    var valor = document.getElementById("saidaAnalogica").value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url+"/saidaAnalogica?input1="+valor, true);    
+    xhttp.send();
+  }
+
+  function clickOn() { 
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url+"/saidaDigital/on", true);
+    xhttp.send();
+    document.getElementById("saidaDigital").innerHTML = "ON"; 
+  }
+
+  function clickOff() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url+"/saidaDigital/off", true);       
+    xhttp.send();
+    document.getElementById("saidaDigital").innerHTML = "OFF";
+  }
+
+  setInterval(function ( ) {
+    /*
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {	
+        document.getElementById("entradaAnalogica").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", url+"/entradaAnalogica", true);    
+    xhttp.send();
+    */
+    fetch(url+"/entradaAnalogica")
+    .then(response => {
+      // valida se a requisição falhou
+      if (!response.ok) {
+        return new Error('falhou a requisição') // cairá no catch da promise
+      }
+
+      // verificando pelo status
+      if (response.status === 404) {
+        return new Error('não encontrou qualquer resultado')
+      }
+
+      // retorna uma promise com os dados em texto      
+      return response.text()
+    })
+    .then(text => {
+      console.log(text)
+      document.getElementById("entradaAnalogica").innerHTML = text
+    })
+    .catch(err => console.log(err.message))
+  }, 5000 ) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("entradaDigital").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", url+"/entradaDigital", true);
+    xhttp.send();
+  }, 5000 ) ;
+
+  
+</script>
+</html>
