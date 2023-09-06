@@ -5,6 +5,12 @@ const animalzinho = {
     cor: 'Preto'
 }
 
-Possíveis relatórios: 
- - Clientes devedores;
- - Animais que não se vacinaram nos últimos 12 meses;
+const cliente = {
+    nome: 'Maria',
+    idade: 2,
+    peso: 64.5,
+}
+
+// Possíveis relatórios: 
+//  - Clientes devedores;
+//  - Animais que não se vacinaram nos últimos 12 meses;
