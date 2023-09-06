@@ -1,0 +1,1 @@
+# Versão da interface do conversor numérico com componentes separados.
