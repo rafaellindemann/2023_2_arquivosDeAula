@@ -1,0 +1,10 @@
+#divResultado {
+    background-color: aqua;
+    border:   red solid 2px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    width: 50%;
+}
+

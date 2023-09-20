@@ -55,6 +55,7 @@ String getValorAnalogico() {
   //map(value, fromLow, fromHigh, toLow, toHigh)
   float valorConvertido = float(map(valorAnalogico, 0, 1023, 0, 33))/10.0; //le em inteiro de 0 a 33 e divide por 10 -> saida de 0 a 3.3 V
   Serial.println("valor analogico lido: " + String(valorConvertido));
+  
   return String(valorConvertido);
 }
   

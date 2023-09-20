@@ -1,11 +1,14 @@
+IPs reservados para cada ESPs da 3a fase V1 em 2023/2
 
 JC: 211
 Gustavo: 212
 Daniel: 213
 Matheus O: 214
 Rafa/Ale: 215
-Luisar: 216
-Jero: 217
+Luigi/Cesar: 216
+Jeff/Ciro: 217
 Isa: 218
-Mateus: 219
-Rafaelo: 220
+Mateus A.: 219
+Rafael: 220
+Cesar: 221
+Sobrando: >221
