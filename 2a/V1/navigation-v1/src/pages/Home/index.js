@@ -12,6 +12,10 @@ export default function Home(){
                 title="Ir pra Sobre"
                 onPress={() => navigation.navigate('Sobre')}
             />
+            <Button 
+                title="Navegar pra Abas"
+                onPress={() => navigation.navigate('Abas')}
+            />
         </View>
     )
 }
