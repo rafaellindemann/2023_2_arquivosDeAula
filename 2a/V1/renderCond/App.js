@@ -12,6 +12,13 @@ export default function App() {
     setContador(contador-1)
   }
 
+  function render(){
+    if(contador>=0){
+      return <Componente1 />
+    }
+      return <Componente2 />
+  }
+
   return (
     <View style={styles.container}>
       
@@ -24,6 +31,7 @@ export default function App() {
       { contador }
       <Button title='-' onPress={diminuir}/>
       
+      {render()}
       <StatusBar style="auto" />
     </View>
   );
