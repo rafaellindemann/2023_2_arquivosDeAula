@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>5.25</title>
+</head>
+<body>
+    <h1>Porcalculator</h1>
+    <div>
+        <label for="inpPreco">Preço do produto</label>
+        <input type="number" id="inpPreco">
+    </div>
+    <div id="divMoedas">
+        <h2>Quantidade das moedas:</h2>
+        <label for="inp1Real">R$1,00</label>
+        <input type="text" id="inp1Real">
+        <label for="inp50centavos">R$0,50</label>
+        <input type="text" id="inp50centavos">
+        <label for="inp25centavos">R$0,25</label>
+        <input type="text" id="inp25centavos">
+        <label for="inp10centavos">R$0,10</label>
+        <input type="text" id="inp10centavos">
+        <label for="inp5centavos">R$0,05</label>
+        <input type="text" id="inp5centavos">
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <div id="divResultado">
+        Aqui vai aparecer o resultado
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
