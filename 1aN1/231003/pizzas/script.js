@@ -12,7 +12,14 @@ function verPreco(){
         case "Broto": preco = 27;
                         break
     }
-
     resultado.innerHTML = "Preço: R$" + preco.toFixed(2)
-   
 }
+
+
+
+
+
+
+
+
+
