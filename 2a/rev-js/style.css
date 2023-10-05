@@ -1,0 +1,21 @@
+body{
+    background-color: yellow;
+}
+#divPainel{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: 5px solid black;
+    width: 233px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+.nomeTime{
+    color: red;
+}
