@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Header() {
  return (
    <View style={header.container}>
-        <Text style={header.texto}>Header</Text>
+        <Text style={header.texto}>Calculadora de IMC</Text>
    </View>
   );
 }
@@ -20,7 +20,7 @@ const header = StyleSheet.create({
       width:'100%'
     },
     texto:{
-        color: '#00ffff',
-
+      color: '#00ffff',
+      fontSize: 40,
     }
   });

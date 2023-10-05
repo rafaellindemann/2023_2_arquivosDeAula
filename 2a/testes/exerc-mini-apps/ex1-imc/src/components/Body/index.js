@@ -5,10 +5,12 @@ import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 export default function Body() {
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
-    const [imc, setImc] = useState("Mete os dados aí");
+    const [imc, setImc] = useState();
 
     function calcular(){
-        alert('Calculando...')
+        // alert('Calculando...')
+        let resultado = Number(peso) / (Number(altura)**2 )
+        setImc(resultado.toFixed(2).replace('.', ','))
     }
  return (
    <View style={body.container}>
@@ -33,7 +35,7 @@ export default function Body() {
             <Text>Calcular</Text>
         </Pressable>
 
-        <Text>{imc}</Text>
+        <Text style={{fontSize:45}}>{imc}</Text>
    </View>
   );
 }
@@ -45,6 +47,7 @@ const body = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'flex-start',
       width:'100%',
+      paddingTop: 33,
     },
     input: {
         borderWidth: 1,
