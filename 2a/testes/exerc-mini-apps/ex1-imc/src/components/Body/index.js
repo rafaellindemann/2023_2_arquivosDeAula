@@ -2,6 +2,14 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 
+Text.defaultProps = {
+    style: {
+      color: 'red', // Defina a cor desejada aqui
+      fontSize: 16, // Defina o tamanho da fonte desejado aqui
+      // Outros estilos globais de texto, se necessário
+    },
+  };
+
 export default function Body() {
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
@@ -52,13 +60,17 @@ const body = StyleSheet.create({
     input: {
         borderWidth: 1,
         height: 40,
+        borderRadius: 10,
     },
-    label:{},
+    label:{
+        color: '#000fff'
+    },
     card: {},
     botao:{
         borderWidth: 1,
         padding: 5,
         marginTop: 10,
-        borderRadius: 5,
-    }
+        borderRadius: 10,
+    },
+
   });
