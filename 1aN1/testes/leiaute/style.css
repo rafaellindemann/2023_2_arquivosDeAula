@@ -1,0 +1,53 @@
+/* *{
+    border: 1px dotted red;
+    margin: 1px;
+} */
+
+body, html{
+    /* flex: 1; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color: cadetblue;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+    width: 100%;
+    height: 90%;
+}
+
+#div1{
+    background-color: aqua;
+    height: 100%;
+    /* flex: 1; */
+    width: 100%;
+}
+
+#div2{
+    background-color: blueviolet;
+    /* flex: 1; */
+    width: 100%;
+    height: 100%;
+}
+
+#divEsqCima{
+    background-color: chartreuse;
+    width: 100%;
+    height: 50%;
+}
+#divEsqBaixo{
+    background-color: tomato;
+    width: 100%;
+    height: 50%;
+}
