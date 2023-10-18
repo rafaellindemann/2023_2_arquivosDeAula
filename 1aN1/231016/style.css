@@ -34,9 +34,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 #secDireita{
     background-color: violet;
+    height: 100%;
 }
 
 .metadesHorizontais{

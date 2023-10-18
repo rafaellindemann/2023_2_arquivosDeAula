@@ -1,0 +1,63 @@
+/* *{
+    border: 1px dotted red;
+    margin: 1px;
+} */
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    height: 10%;
+    background-color: #00ff00;
+}
+
+main{
+    height: 90%;
+    background-color: #0044dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#secEsquerda{
+    background-color: #0099aa;
+    width: 100%;
+    height: 100%;
+}
+#secDireita{
+    background-color: #6666aa;
+    width: 100%;
+    height: 100%;
+}
+#divCima{
+    background-color: #0099aa;
+    height: 50%;
+    width: 100%;
+    font-size: 200px;
+}
+#divBaixo{
+    background-color: aqua;
+    height: 50%;
+    width: 100%;
+}
+
+/* div{
+    border: 1px dotted red;
+} */
+
+
+
+/* #inpNome{
+
+}
+
+.botoes{
+
+}
+
+.botoes, #inpNome{
+
+} */
