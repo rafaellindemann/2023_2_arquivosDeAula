@@ -1,0 +1,60 @@
+html{
+
+    height: 100%;
+
+}
+
+body{
+
+    height: 100%;
+    background-color: chartreuse;
+    margin: 0;
+
+}
+
+#container{
+
+    height: 100%;
+    background-color: brown;
+
+}
+
+#topo{
+
+    height: 40%;
+    background-color: aqua;
+
+}
+
+#baixo{
+
+    height: 60%;
+    background-color:blueviolet;
+    display: flex;
+
+}
+
+#baixo-esquerda{
+
+    height: 100%;
+    width: 33%;
+    background-color:blanchedalmond;
+
+}
+
+#baixo-meio{
+
+    height: 100%;
+    width: 34%;
+    background-color:chocolate;
+
+}
+
+#baixo-direita{
+
+    height: 100%;
+    width: 33%;
+    background-color:crimson;
+
+}
+

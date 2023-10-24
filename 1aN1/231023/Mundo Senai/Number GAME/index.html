@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number GAME :D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="topo">
+
+            <center>
+
+                <br><br>
+                <label><b>Number GAME</b></label><br><br>
+                <label>Adivinhe o número secreto!</label>
+
+            </center>
+
+        </div>
+
+        <div id="baixo">
+
+            <div id="baixo-esquerda">
+
+                <center>
+                    
+                    <br>
+                    <label>DEFINIÇÕES</label><br><br>
+
+                    <label>De</label> 
+                    <input id="lmtMin" type="number" min="0" max="100">
+                    <label>a</label> 
+                    <input id="lmtMax" type="number" min="0" max="100"><br><br>
+
+                    <label>Max Tentativas</label>
+                    <input id="maxTentativas" type="number" min="0" max="100">
+
+                </center>
+
+            </div>
+            
+            <div id="baixo-meio">
+                
+                <center>
+    
+                    <br>
+                    <label>JOGAR</label><br><br>
+                    <label>Seu palpite</label>
+                    <input id="palpiteJogador" type="number" min="0" max="100">
+                    <button onclick="Confirma()">Confirma</button><br><br>
+                    <label>Tentativas Restantes</label>
+                    <input id="restoTentativas" type="number" min="0" max="100"><br><br>
+                    <button onclick="Inicia()" id="btIniciar">Iniciar</button>
+                    <button onclick="Desiste()">Desistir</button><br><br>
+                    <label id="msgJogador">Frase de efeito! :D</label>   
+    
+                </center>
+
+            </div>
+
+            <div id="baixo-direita">
+
+                <center>
+
+                    <br>
+                    <label>PLACAR / DICAS</label><br><br>
+                    <label>Pontuação</label><br>
+                    <input id="pontosJogador" type="number" min="0" max="100"><br><br>
+                    <label>Dica Número</label><br>
+                    <input id="dicasNumero">
+
+                </center>
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="jogoadivinha.js"></script>
+
+</body>
+</html>

@@ -14,4 +14,4 @@ document.getElementById('divCima').innerHTML = numeroMagico
 // floor >> 9
 // ceil >> 10
 
-console.log(numeroMagico)
+console.log('numeroMagico')
