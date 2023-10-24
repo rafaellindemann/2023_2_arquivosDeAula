@@ -11,6 +11,15 @@ let numeroSecreto
 let maximoTentativas, tentativasRestantes
 let pontuacao, pontosPorTentativa
 
+// TODO: Implementar o 'perdeu'
+// TODO: Reabilitar o iniciar
+// TODO: resolver o '-0'
+// TODO: Melhorar MUITO o visual :D
+// TODO: se acertou, habilitar o iniciar
+// se perder, habilitar o iniciar
+
+// TODO: limpar input e focus nele
+
 function Confirma(){
     
     if(tentativasRestantes > 0){// verificar se tentativas restantes > 0
@@ -20,18 +29,23 @@ function Confirma(){
         elementoInputRestoTentativas.value = tentativasRestantes // atualizar tentativas restantes na tela
         if(chute == numeroSecreto){// conferir valor x chute 
             alert("Acertou, parabéns :* ")
+            // TODO: mostrar a mensagem da frase de efeito
         }else if(chute > numeroSecreto){// dar a dica do resultado
                 elementoInputDicasNumero.value = "Chutou alto"
+                pontos = pontos - pontosPorTentativa
+
         }else{
-            elementoInputDicasNumero.value = "Chutou baixinho..."
+                elementoInputDicasNumero.value = "Chutou baixinho..."
+                pontos -= pontosPorTentativa
         }
+
+        elementoInputPontosJogador.value = pontos.toFixed(0)
+
     }else{
         alert("Acabou...\nVOCÊ PERDEU!")
     }
-    // TODO: se acertou, habilitar o iniciar
-    // se perder, habilitar o iniciar
-
-    // TODO: limpar input e focus nele
+    elementoInputPalpiteJogador.value = ''
+    elementoInputPalpiteJogador.focus()
 }
 
 function Inicia(){
