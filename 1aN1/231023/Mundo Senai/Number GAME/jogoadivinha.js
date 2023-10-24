@@ -10,6 +10,7 @@ let botaoIniciar = document.getElementById('btIniciar')
 let numeroSecreto
 let maximoTentativas, tentativasRestantes
 let pontuacao, pontosPorTentativa
+let venceu = false
 
 // TODO: Implementar o 'perdeu'
 // TODO: Reabilitar o iniciar
@@ -17,8 +18,9 @@ let pontuacao, pontosPorTentativa
 // TODO: Melhorar MUITO o visual :D
 // TODO: se acertou, habilitar o iniciar
 // se perder, habilitar o iniciar
+// TODO: fazer o ranking :D
 
-// TODO: limpar input e focus nele
+
 
 function Confirma(){
     
@@ -29,6 +31,9 @@ function Confirma(){
         elementoInputRestoTentativas.value = tentativasRestantes // atualizar tentativas restantes na tela
         if(chute == numeroSecreto){// conferir valor x chute 
             alert("Acertou, parabéns :* ")
+            venceu = true
+            botaoIniciar.disabled = false
+            limparDefinicoes()
             // TODO: mostrar a mensagem da frase de efeito
         }else if(chute > numeroSecreto){// dar a dica do resultado
                 elementoInputDicasNumero.value = "Chutou alto"
@@ -37,6 +42,12 @@ function Confirma(){
         }else{
                 elementoInputDicasNumero.value = "Chutou baixinho..."
                 pontos -= pontosPorTentativa
+        }
+        if(tentativasRestantes == 0 && venceu == false){ // se foi a última jogada e não venceu...
+            // alert("Acabou de perder, bem perdidinho")
+            elementoLabelMsgJogador.innerHTML = 'Perdeu. Tente novamente ;P'
+            botaoIniciar.disabled = false
+            limparDefinicoes()
         }
 
         elementoInputPontosJogador.value = pontos.toFixed(0)
@@ -58,6 +69,7 @@ function Inicia(){
     pontosPorTentativa = 100 / maximoTentativas
     pontos = 100
     elementoInputPontosJogador.value = pontos
+    venceu = false // como pode ser uma nova partida, reseta a variável venceu
 
     console.log("maximoTentativas: " + maximoTentativas)
     console.log("numeroSecreto: " + numeroSecreto)
@@ -67,4 +79,10 @@ function Desiste(){
 
     //alert('oi3')
 
+}
+
+function limparDefinicoes(){
+    elementoInputLmtMin.value = ''
+    elementoInputLmtMax.value = ''
+    elementoInputMaxTentativas.value = ''
 }
