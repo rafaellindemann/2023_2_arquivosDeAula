@@ -8,6 +8,7 @@ let elementoInputPontosJogador = document.getElementById('pontosJogador')
 let elementoInputDicasNumero = document.getElementById('dicasNumero')
 let botaoIniciar = document.getElementById('btIniciar')
 let botaoConfirmar = document.getElementById('btConfirma')
+let botaoDesistir = document.getElementById('btDesistir')
 let numeroSecreto
 let maximoTentativas, tentativasRestantes
 let pontuacao, pontosPorTentativa
@@ -66,6 +67,7 @@ function Inicia(){
     elementoInputPontosJogador.value = pontos
     venceu = false // como pode ser uma nova partida, reseta a variável venceu
     botaoConfirmar.disabled = false // habilita o botao das bicudas
+    botaoDesistir.disabled = false // habilita o botao de voltar pra casa chorando
     console.log("maximoTentativas: " + maximoTentativas)
     console.log("numeroSecreto: " + numeroSecreto)
 }
@@ -73,6 +75,10 @@ function Inicia(){
 function Desiste(){
 
     //alert('oi3')
+    alert("Você desistiu da partida.")
+    Inicia()
+    limparDefinicoes()
+    botaoIniciar.disabled = false
 
 }
 
