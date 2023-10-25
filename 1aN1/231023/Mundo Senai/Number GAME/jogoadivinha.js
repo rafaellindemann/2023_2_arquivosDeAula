@@ -13,6 +13,7 @@ let pontuacao, pontosPorTentativa
 let venceu = false
 
 // TODO: Melhorar MUITO o visual :D
+// TODO: implementar o botão desistir
 
 function Confirma(){
     
