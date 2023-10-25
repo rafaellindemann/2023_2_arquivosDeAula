@@ -1,0 +1,59 @@
+/* *{
+    border: 1px dotted red;
+    margin: 2px;
+} */
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: blueviolet;
+    height: 10%;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: aqua;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+#secEsquerda{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#secDireita{
+    background-color: violet;
+    height: 100%;
+}
+
+.metadesHorizontais{
+    height: 100%;
+    width: 50%;
+}
+
+#esqCima{
+    background-color: green;
+    height: 50%;
+    width: 100%;
+}
+
+#esqBaixo{
+    background-color: yellow;
+    height: 50%;
+    width: 100%;
+}
