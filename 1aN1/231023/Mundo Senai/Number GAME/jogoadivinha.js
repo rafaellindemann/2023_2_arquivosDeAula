@@ -7,6 +7,7 @@ let elementoLabelMsgJogador = document.getElementById('msgJogador')
 let elementoInputPontosJogador = document.getElementById('pontosJogador')
 let elementoInputDicasNumero = document.getElementById('dicasNumero')
 let botaoIniciar = document.getElementById('btIniciar')
+let botaoConfirmar = document.getElementById('btConfirma')
 let numeroSecreto
 let maximoTentativas, tentativasRestantes
 let pontuacao, pontosPorTentativa
@@ -28,21 +29,21 @@ function Confirma(){
             botaoIniciar.disabled = false
             limparDefinicoes()
             // TODO: mostrar a mensagem da frase de efeito
-        }else if(chute > numeroSecreto){// dar a dica do resultado
+        }else if(chute > numeroSecreto){// errou pra cima
                 elementoInputDicasNumero.value = "Chutou alto"
-                pontos = pontos - pontosPorTentativa
+                pontos = pontos - pontosPorTentativa // perdeu pontos por ter errado
 
-        }else{
+        }else{ // errou pra baixo
                 elementoInputDicasNumero.value = "Chutou baixinho..."
-                pontos -= pontosPorTentativa
+                pontos -= pontosPorTentativa // perdeu pontos por ter errado
         }
         if(tentativasRestantes == 0 && venceu == false){ // se foi a última jogada e não venceu...
             // alert("Acabou de perder, bem perdidinho")
             elementoLabelMsgJogador.innerHTML = 'Perdeu. Tente novamente ;P'
-            botaoIniciar.disabled = false
+            botaoIniciar.disabled = false // reabilita o botão de iniciar
             limparDefinicoes()
         }
-        if(pontos < 1) {
+        if(pontos < 1) { // elimina o lixo do '-0'
             pontos = 0
         }
         elementoInputPontosJogador.value = pontos.toFixed(0)
@@ -64,7 +65,7 @@ function Inicia(){
     pontos = 100
     elementoInputPontosJogador.value = pontos
     venceu = false // como pode ser uma nova partida, reseta a variável venceu
-
+    botaoConfirmar.disabled = false // habilita o botao das bicudas
     console.log("maximoTentativas: " + maximoTentativas)
     console.log("numeroSecreto: " + numeroSecreto)
 }
@@ -79,4 +80,5 @@ function limparDefinicoes(){
     elementoInputLmtMin.value = ''
     elementoInputLmtMax.value = ''
     elementoInputMaxTentativas.value = ''
+    botaoConfirmar.disabled = true
 }
