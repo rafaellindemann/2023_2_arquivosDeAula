@@ -9,36 +9,41 @@ body{
     height: 100%;
     background-color: chartreuse;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: monospace; */
 
 }
 
 #container{
 
     height: 100%;
-    background-color: brown;
+    background-color: #aaaaff;
 
 }
 
 #topo{
 
     height: 40%;
-    background-color: aqua;
+    background-color: #aaaaff;
+    border: 3px solid black;
+    border-radius: 25px;
 
 }
 
 #baixo{
 
     height: 60%;
-    background-color:blueviolet;
+    background-color:#aaaaff;
     display: flex;
-
+    border: 2px solid black;
+    border-radius: 25px;
 }
 
 #baixo-esquerda{
 
     height: 100%;
     width: 33%;
-    background-color:blanchedalmond;
+    background-color:#aaaaff;
 
 }
 
@@ -46,7 +51,7 @@ body{
 
     height: 100%;
     width: 34%;
-    background-color:chocolate;
+    background-color:#aaaaff;
 
 }
 
@@ -54,7 +59,19 @@ body{
 
     height: 100%;
     width: 33%;
-    background-color:crimson;
+    background-color:#aaaaff;
 
+}
+
+input{
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+    background-color: #7777ff;
+}
+
+button:hover{
+    background-color: #5555ff;
 }
 
