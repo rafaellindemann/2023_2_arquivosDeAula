@@ -17,7 +17,7 @@ body{
 #container{
 
     height: 100%;
-    background-color: #aaaaff;
+    background-color: #000;
 
 }
 
@@ -33,7 +33,7 @@ body{
 #baixo{
 
     height: 60%;
-    background-color:#aaaaff;
+    background-color:#000;
     display: flex;
     border: 2px solid black;
     border-radius: 25px;
@@ -44,7 +44,9 @@ body{
     height: 100%;
     width: 33%;
     background-color:#aaaaff;
-
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1px;
 }
 
 #baixo-meio{
@@ -52,7 +54,9 @@ body{
     height: 100%;
     width: 34%;
     background-color:#aaaaff;
-
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1px;
 }
 
 #baixo-direita{
@@ -60,7 +64,9 @@ body{
     height: 100%;
     width: 33%;
     background-color:#aaaaff;
-
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1px;
 }
 
 input{
