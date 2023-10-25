@@ -12,15 +12,7 @@ let maximoTentativas, tentativasRestantes
 let pontuacao, pontosPorTentativa
 let venceu = false
 
-// TODO: Implementar o 'perdeu'
-// TODO: Reabilitar o iniciar
-// TODO: resolver o '-0'
 // TODO: Melhorar MUITO o visual :D
-// TODO: se acertou, habilitar o iniciar
-// se perder, habilitar o iniciar
-// TODO: fazer o ranking :D
-
-
 
 function Confirma(){
     
@@ -49,11 +41,12 @@ function Confirma(){
             botaoIniciar.disabled = false
             limparDefinicoes()
         }
-
+        if(pontos < 1) {
+            pontos = 0
+        }
         elementoInputPontosJogador.value = pontos.toFixed(0)
-
     }else{
-        alert("Acabou...\nVOCÊ PERDEU!")
+        alert("Já acabou...\nVOCÊ PERDEU!\nPode parar")
     }
     elementoInputPalpiteJogador.value = ''
     elementoInputPalpiteJogador.focus()
