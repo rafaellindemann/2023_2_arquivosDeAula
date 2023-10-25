@@ -78,8 +78,7 @@ function Desiste(){
     alert("Você desistiu da partida.")
     Inicia()
     limparDefinicoes()
-    botaoIniciar.disabled = false
-
+    botaoIniciar.disabled = false // reabilita o iniciar para começar uma  nova partida
 }
 
 function limparDefinicoes(){
@@ -87,4 +86,5 @@ function limparDefinicoes(){
     elementoInputLmtMax.value = ''
     elementoInputMaxTentativas.value = ''
     botaoConfirmar.disabled = true
+    botaoDesistir.disabled = true
 }
