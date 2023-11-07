@@ -1,7 +1,7 @@
 let resultado = document.getElementById('divResultado')
 let numero, maior, menor, i
 i = 0
-while(i<5){
+while(i<15){
     i++
     numero = Number(prompt("Número: "))
     if(i==1){
