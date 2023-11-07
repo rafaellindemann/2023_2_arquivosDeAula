@@ -8,7 +8,7 @@ while(i<15){
     if(numero > maior){
         maior = numero
     }
-    if(numero < menor){
+    if(numero < menor){ 
         menor = numero
     }
 }
