@@ -7,7 +7,6 @@ cont = 0;
 while(cont < limite){
     cont++;
     elementoDivResultado.innerHTML += cont + ': Qual seu nome?<br>'
-
 }
 
 
