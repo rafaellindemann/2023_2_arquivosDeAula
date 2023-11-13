@@ -1,0 +1,9 @@
+/* *{
+    border: 1px solid red;
+} */
+
+#divTabela{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
