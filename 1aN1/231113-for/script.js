@@ -1,7 +1,7 @@
 
 let  i
 
-i = 120
+i = 0
 while (i < 10){
     console.log('Valor do i: ' + i);
     i++
