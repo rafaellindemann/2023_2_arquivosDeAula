@@ -21,4 +21,8 @@ server.get('/cursos', (req, res) => {
 
 })
 
-server.listen(3000);
+// server.listen(3000);
+server.listen(3000, '0.0.0.0', () => {
+    console.log('Servidor está ouvindo em http://0.0.0.0:3000');
+  });
+  

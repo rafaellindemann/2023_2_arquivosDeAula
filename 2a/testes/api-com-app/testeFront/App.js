@@ -8,6 +8,7 @@ export default function App() {
   const fetchData = async () => {
     try {
       const response = await axios.get('http://localhost:3000/cursos'); // Use o endereço do seu servidor Express
+      // const response = await axios.get('192.168.15.10:3000/cursos'); // Use o endereço do seu servidor Express
       setCont(response.data.cont);
        console.log(response.data.cont);
     } catch (error) {
