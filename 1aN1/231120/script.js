@@ -1,6 +1,7 @@
 let pets = []
 
 let inputPet = document.getElementById('inpPet')
+let inputPesquisa = document.getElementById('inpPesquisa')
 
 function cadastrar(){
     
@@ -14,4 +15,14 @@ function cadastrar(){
     
     inputPet.value = ''
     inputPet.focus()
+}
+
+function pesquisar(){
+    let petPesquisado = inputPesquisa.value
+    for(i=0; i<pets.length; i++){
+        // console.log(pets[i])
+        if(petPesquisado == pets[i]){
+            alert('Achei: ' + pets[i])
+        }
+    }
 }
