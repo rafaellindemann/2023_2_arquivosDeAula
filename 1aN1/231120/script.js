@@ -17,10 +17,10 @@ function cadastrar(){
     inputPet.focus()
 }
 
+
 function pesquisar(){
     let petPesquisado = inputPesquisa.value
     for(i=0; i<pets.length; i++){
-        // console.log(pets[i])
         if(petPesquisado == pets[i]){
             alert('Achei: ' + pets[i])
         }
