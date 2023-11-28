@@ -25,6 +25,14 @@ function Cadastrar(){
     }
 
     usuarios.push(usuario)
+    
+    // mesma coisa, mas feita no estilo Number(prompt())
+    // usuarios.push({
+    //     nome: elementoInputUser.value,
+    //     cpf: elementoInputCPF.value,
+    //     idade: elementoInputIdade.value
+    // })
+
 
     // users.push(elementoInputUser.value)
     // cpfs.push(elementoInputCPF.value)
