@@ -1,7 +1,7 @@
 // Vetor onde ficarão os usuários 
-let users = []
-let cpfs = []
-let idades = []
+let users = ['Melancio']
+let cpfs = ['111111111-11']
+let idades = [11]
 
 // Pega os elementos pelos seus ID's e armazena em variáveis
 let elementoInputUser = document.getElementById('inptUser')
@@ -34,9 +34,12 @@ function Listar(){
 
     elementoDivLista.innerHTML = ''
     for(i=0; i<users.length; i++){
-        elementoDivLista.innerHTML +=  users[i] + '<BR>'
-        elementoDivLista.innerHTML += cpfs[i] + '<BR>'
-        elementoDivLista.innerHTML += idades[i] + '<hr>'
+        elementoDivLista.innerHTML +=  
+        `<div class="card">
+            Nome: ${users[i]} <br>
+            CPF: ${cpfs[i]} <br>
+            Idade: ${idades[i]} 
+        </div>`
     }
 
     // elementoDivLista.innerHTML = users + '<br>'
